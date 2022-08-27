@@ -1,30 +1,31 @@
+![Screenshot](images/aws_sam.png)
+
 # Data Ingest Project with AWS Lambda
 
-This project contains source code and supporting files for a serverless application that you can deploy with the SAM CLI. It includes the following files and folders.
+### What is Serverless?
+Serverless are systems where developers can deploy any system by developing on the cloud without using hardware and network infrastructure.
+AWS lambda will be used in this project. Work will be done on how to deploy a local code to AWS lambda. Project purpose: We will make an example of how to import data to Amazon RDS with AWS Lambda by pulling data from API. We will learn how to use AWS SAM, which is one of the most important steps.
 
-- hello_world - Code for the application's Lambda function.
+This project will contain source code to support SAM CLI.
+
+- dataIngest - Code for the application's Lambda function.
 - events - Invocation events that you can use to invoke the function.
-- tests - Unit tests for the application code. 
 - template.yaml - A template that defines the application's AWS resources.
 
-The application uses several AWS resources, including Lambda functions and an API Gateway API. These resources are defined in the `template.yaml` file in this project. You can update the template to add AWS resources through the same deployment process that updates your application code.
-
-If you prefer to use an integrated development environment (IDE) to build and test your application, you can use the AWS Toolkit.  
-The AWS Toolkit is an open source plug-in for popular IDEs that uses the SAM CLI to build and deploy serverless applications on AWS. The AWS Toolkit also adds a simplified step-through debugging experience for Lambda function code. See the following links to get started.
-
-* [PyCharm](https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/welcome.html)
-* [VS Code](https://docs.aws.amazon.com/toolkit-for-vscode/latest/userguide/welcome.html)
-* [Visual Studio](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/welcome.html)
-
-## Deploy the sample application
-
-The Serverless Application Model Command Line Interface (SAM CLI) is an extension of the AWS CLI that adds functionality for building and testing Lambda applications. It uses Docker to run your functions in an Amazon Linux environment that matches Lambda. It can also emulate your application's build environment and API.
+### Deploy the application
 
 To use the SAM CLI, you need the following tools.
+The purpose of downloading Docker is to run the code locally.
+You can download one of these versions as it supports versions 3.6 to 3.9 while running on AWS lambda.
 
 * SAM CLI - [Install the SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
 * [Python 3 installed](https://www.python.org/downloads/)
 * Docker - [Install Docker community edition](https://hub.docker.com/search/?type=edition&offering=community)
+
+
+### Enviroment variables
+After downloading the applications, we can check the environment variables settings and make them work from all paths.
+
 
 ## Use the SAM CLI to build and test locally
 
