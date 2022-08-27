@@ -1,4 +1,4 @@
-![Screenshot](images/aws_sam.png)
+![AWS-SAM](images/aws_sam2.png)
 
 # Data Ingest Project with AWS Lambda
 
@@ -25,6 +25,111 @@ You can download one of these versions as it supports versions 3.6 to 3.9 while 
 
 ### Enviroment variables
 After downloading the applications, we can check the environment variables settings and make them work from all paths.
+
+### Creating the working file
+```bash
+C:\Users\mehmet\Desktop>mkdir awslambda
+```
+```bash
+C:\Users\mehmet\Desktop>cd awslambda
+```
+
+We will be able to deploy our code locally with AWS sam. First, let's log in to our account with the AWS CLI.
+We will create users with AWS Identity and Access Management. You can give full admin for this user's permissinons privileges. You can learn how to create users and access Access information from the following resource.
+
+* IAM-[WS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html)
+
+### SAM-CLI
+
+```bash
+C:\Users\mehmet\Desktop\awslambda> aws configure
+AWS Access Key ID [****************ADGQ]:
+AWS Secret Access Key [****************NSDK]: 
+Default region name [eu-west-1]: 
+Default output format [None]: 
+PS C:\Users\mehmet\Desktop\awslambda>
+```
+
+We will init the SAM. We will need some files to be able to deploy to AWS Lambda. We can use the Hello-World function in SAM to have ready access to these files.
+
+```bash
+C:\Users\mehmet\Desktop\awslambda> sam init
+```
+
+* Step-1
+```bash
+Which template source would you like to use?
+        1 - AWS Quick Start Templates       
+        2 - Custom Template Location        
+Choice: 1
+```
+
+* Step-2
+```bash
+Choose an AWS Quick Start application template
+        1 - Hello World Example
+        2 - Multi-step workflow
+        3 - Serverless API     
+        4 - Scheduled task
+        5 - Standalone function
+        6 - Data processing
+        7 - Infrastructure event management
+        8 - Lambda EFS example
+        9 - Machine Learning
+Template: 1
+```
+* Step-3
+```bash
+Use the most popular runtime and package type? (Python and zip) [y/N]: N
+```
+
+* Step-4
+```bash
+Which runtime would you like to use?
+        1 - dotnet6
+        2 - dotnet5.0
+        3 - dotnetcore3.1
+        4 - go1.x
+        5 - graalvm.java11 (provided.al2)
+        6 - graalvm.java17 (provided.al2)
+        7 - java11
+        8 - java8.al2
+        9 - java8
+        10 - nodejs16.x
+        11 - nodejs14.x
+        12 - nodejs12.x
+        13 - python3.9
+        14 - python3.8
+        15 - python3.7
+        16 - python3.6
+        17 - ruby2.7
+        18 - rust (provided.al2)
+Runtime: 14
+```
+* Step-5
+```bash
+What package type would you like to use?
+        1 - Zip
+        2 - Image
+Package type: 1
+```
+* Step-6
+```bash
+Would you like to enable X-Ray tracing on the function(s) in your application?  [y/N]: N
+```
+* Step-7
+```bash
+Project name [sam-app]: dataIngest
+```
+* Data Ingest folder has been created under the aws lambda project. There are files in it that we need to work on.
+
+![Folders](images/project_folders.png)
+
+
+
+
+
+
 
 
 ## Use the SAM CLI to build and test locally
