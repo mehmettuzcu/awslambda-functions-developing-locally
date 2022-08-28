@@ -47,7 +47,7 @@ AWS Access Key ID [****************ADGQ]:
 AWS Secret Access Key [****************NSDK]: 
 Default region name [eu-west-1]: 
 Default output format [None]: 
-PS C:\Users\mehmet\Desktop\awslambda>
+C:\Users\mehmet\Desktop\awslambda>
 ```
 
 We will init the SAM. We will need some files to be able to deploy to AWS Lambda. We can use the Hello-World function in SAM to have ready access to these files.
@@ -231,9 +231,26 @@ Successfully created/updated stack - sam-app in eu-west-1
 * We can test our function and observe the log output
 ![logs](images/log.png)
 
+### Environment variables on AWS Lambda
+* You can review the document below to add user and database information via Environment variables.
 
-## Resources
+[Using AWS Lambda environment variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-config)
 
-See the [AWS SAM developer guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) for an introduction to SAM specification, the SAM CLI, and serverless application concepts.
+# Conclusion
+* We learned how to deploy a code we created locally to AWS Lambda using PyCharm. The purpose of the code is that we have examined the transfer of the data we pull from the API to AWS RDS and AWS S3.
 
-Next, you can use AWS Serverless Application Repository to deploy ready to use Apps that go beyond hello world samples and learn how authors developed their applications: [AWS Serverless Application Repository main page](https://aws.amazon.com/serverless/serverlessrepo/)
+
+### Resources
+
+[AWS SAM developer guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) for an introduction to SAM specification, the SAM CLI, and serverless application concepts.
+
+[Getting started with Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.html)
+
+[Amazon Simple Storage Service Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
+
+[Using AWS Lambda environment variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-config)
+
+
+### AUTHOR 
+
+[Mehmet Tuzcu](https://github.com/mehmettuzcu)
