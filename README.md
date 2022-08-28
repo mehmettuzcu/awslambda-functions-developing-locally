@@ -239,7 +239,6 @@ Successfully created/updated stack - sam-app in eu-west-1
 # Conclusion
 * We learned how to deploy a code we created locally to AWS Lambda using PyCharm. The purpose of the code is that we have examined the transfer of the data we pull from the API to AWS RDS and AWS S3.
 
-
 ### Resources
 
 [AWS SAM developer guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
@@ -251,7 +250,3 @@ Successfully created/updated stack - sam-app in eu-west-1
 [Amazon Simple Storage Service Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
 
 [AWS Identity and Access Management Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
-
-### AUTHOR 
-
-[Mehmet Tuzcu](https://github.com/mehmettuzcu)
