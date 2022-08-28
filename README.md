@@ -242,14 +242,15 @@ Successfully created/updated stack - sam-app in eu-west-1
 
 ### Resources
 
-[AWS SAM developer guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) for an introduction to SAM specification, the SAM CLI, and serverless application concepts.
+[AWS SAM developer guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
 
 [Getting started with Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.html)
 
-[Amazon Simple Storage Service Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
-
 [Using AWS Lambda environment variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-config)
 
+[Amazon Simple Storage Service Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
+
+[AWS Identity and Access Management Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
 
 ### AUTHOR 
 
