@@ -65,8 +65,8 @@ def wheather(event, context):
     local_path = './wheather.csv'
     bucket_path = 'tuzcu2/wheather.csv'
     s3.meta.client.upload_file(Filename=local_path, Bucket=bucket_name, Key=bucket_path)
-
-    print("Data Loaded Succesfully to MySQL")"""
+    """
+    print("Data Loaded Succesfully to S3")
 
     end = datetime.now()
     print(f"""

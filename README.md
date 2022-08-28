@@ -193,7 +193,7 @@ Configuring SAM deploy
 
 ```
 
-```
+```bash
 Deploy this changeset? [y/N]: y
 ```
 
@@ -201,11 +201,35 @@ Deploy this changeset? [y/N]: y
 
 ![CloudFormation](images/CloudFormation.png)
 
+```bash
+2022-08-28 16:25:53 - Waiting for stack create/update to complete
+
+CloudFormation events from stack operations (refresh every 0.5 seconds)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+ResourceStatus                                            ResourceType                                              LogicalResourceId                                         ResourceStatusReason
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+UPDATE_IN_PROGRESS                                        AWS::CloudFormation::Stack                                sam-app                                                   User Initiated
+UPDATE_IN_PROGRESS                                        AWS::Lambda::Function                                     loadData                                                  -                                                       
+UPDATE_COMPLETE                                           AWS::Lambda::Function                                     loadData                                                  -                                                       
+UPDATE_COMPLETE_CLEANUP_IN_PROGRESS                       AWS::CloudFormation::Stack                                sam-app                                                   -                                                       
+UPDATE_COMPLETE                                           AWS::CloudFormation::Stack                                sam-app                                                   -                                                       
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Successfully created/updated stack - sam-app in eu-west-1
+
+```
+
 ## AWS Lambda
 * We can examine our Function on AWS Lambda.
 
 ![sam-app](images/sam-app.png)
 
+* I am creating an event to run the function.
+
+![event](images/event.png)
+
+* We can test our function and observe the log output
+![logs](images/log.png)
 
 
 ## Resources
