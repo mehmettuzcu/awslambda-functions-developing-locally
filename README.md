@@ -126,40 +126,87 @@ Project name [sam-app]: dataIngest
 ![Folders](images/project_folders.png)
 
 
+## File Descriptions
+- [events](events/event.json) - `Invocation events that you can use to invoke the function.`
+
+```json
+{
+  "first_name": "Mehmet",
+  "second_name": "Tuzcu",
+  "message": "Welcome to Function"
+}
+```
+- code file - `Code for the application's Lambda function.`
+- [app.py](code/app.py)
+- [requirements.txt](requirements.txt)
+- [template.yaml](template.yaml) - `A template that defines the application's AWS resources.`
 
 
-
-
+* After making the necessary arrangements on the files, we can send our code to aws lambda.
 
 
 ## Use the SAM CLI to build and test locally
 
-Build your application with the `sam build --use-container` command.
+Build your application with the `sam build ` command.
 
 ```bash
-dataIngest$ sam build --use-container
+dataIngest$ sam build
 ```
 
-The SAM CLI installs dependencies defined in `hello_world/requirements.txt`, creates a deployment package, and saves it in the `.aws-sam/build` folder.
+The SAM CLI installs dependencies defined in `code/requirements.txt`, creates a deployment package, and saves it in the `.aws-sam/build` folder.
 
 Test a single function by invoking it directly with a test event. An event is a JSON document that represents the input that the function receives from the event source. Test events are included in the `events` folder in this project.
 
 Run functions locally and invoke them with the `sam local invoke` command.
 
 ```bash
-dataIngest$ sam local invoke HelloWorldFunction --event events/event.json
+dataIngest$ sam local invoke loadData --event events/event.json
 ```
 
-## Add a resource to your application
-The application template uses AWS Serverless Application Model (AWS SAM) to define application resources. AWS SAM is an extension of AWS CloudFormation with a simpler syntax for configuring common serverless application resources such as functions, triggers, and APIs. For resources not included in [the SAM specification](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md), you can use standard [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) resource types.
-
-## Cleanup
-
-To delete the sample application that you created, use the AWS CLI. Assuming you used your project name for the stack name, you can run the following:
+* Here we can check that the code is working. Next we need to send it to the aws lambda.
 
 ```bash
-aws cloudformation delete-stack --stack-name dataIngest
+dataIngest$ sam deploy --guided              
 ```
+
+* While deploying to AWS Lambda, we are making some configuration settings.
+```bash
+Configuring SAM deploy
+======================
+
+        Looking for config file [samconfig.toml] :  Found
+        Reading default arguments  :  Success
+
+        Setting default arguments for 'sam deploy'
+        =========================================
+        Stack Name [sam-app]:
+        AWS Region [eu-west-1]:
+        #Shows you resources changes to be deployed and require a 'Y' to initiate deploy
+        Confirm changes before deploy [Y/n]: Y
+        #SAM needs permission to be able to create roles to connect to the resources in your template
+        Allow SAM CLI IAM role creation [Y/n]: Y
+        #Preserves the state of previously provisioned resources when an operation fails
+        Disable rollback [Y/n]: Y
+        Save arguments to configuration file [Y/n]: Y
+        SAM configuration file [samconfig.toml]: 
+        SAM configuration environment [default]: 
+
+```
+
+```
+Deploy this changeset? [y/N]: y
+```
+
+* After making the configuration settings, we can review the status on AWS CloudFormation.
+
+![CloudFormation](images/CloudFormation.png)
+
+## AWS Lambda
+* We can examine our Function on AWS Lambda.
+
+![sam-app](images/sam-app.png)
+
+
 
 ## Resources
 

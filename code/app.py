@@ -61,12 +61,12 @@ def wheather(event, context):
     df.to_sql(name='wheatherId',con=mysql_conn, index=False, if_exists='replace')
     print("Data Loaded Succesfully to MySQL")
 
-    df.to_csv("wheather.csv", index=False)
+    """df.to_csv("wheather.csv", index=False)
     local_path = './wheather.csv'
     bucket_path = 'tuzcu2/wheather.csv'
     s3.meta.client.upload_file(Filename=local_path, Bucket=bucket_name, Key=bucket_path)
 
-    print("Data Loaded Succesfully to MySQL")
+    print("Data Loaded Succesfully to MySQL")"""
 
     end = datetime.now()
     print(f"""
